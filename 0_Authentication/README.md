@@ -10,7 +10,7 @@
   
 * base64 es fácil de decodificar, Por lo tanto _Basic authentication_ debería usarse junto con otros protocolos de seguridad como HTTPS/SSL. 
 
-![Basic Auth](./basic.png)
+![Basic Auth](https://chathurangat.files.wordpress.com/2017/08/blog-post-spring-security-basic-authentication-1.png?w=1108)
 
 ## OAUTH2
 
@@ -57,9 +57,10 @@
 **Signature**: Qu7rv5wqk6zGjiMU8ZixwvKQGBNW9hhj55DbSP50b1g
 
 
+![JWT Example](https://artsy.github.io/images/2016-10-26-jwt-artsy-journey/jwt-example.png)
+
 ### JWT - Header
 
-![JWT Head](./head.png) 
 
 Json con Metadata del JWT  el cual especifica el tipo de token y algoritmo de encriptación.
 
@@ -69,7 +70,6 @@ Json con Metadata del JWT  el cual especifica el tipo de token y algoritmo de en
 
 ### JWT - Payload
 
-![JWT Payload](./payload.png)
 
 Json  que puede llevar cualquier tipo de dato, por lo regular se ocupa para mandar datos de la sesión como: email,id,username. Además aquí se agregan otras reglas como la expiración del token.
 Algunas reglas son :
@@ -86,14 +86,13 @@ Algunas reglas son :
 
 ### JWT - Signature
 
-![JWT Signature](./signature.png)
 
 La firma del JWT se genera usando el header y el payload en base64,este nuevo string es encriptado con una llave secreta unica guardada en el backend. El Siganture es el que da validez al token en el backend.
 
 
 ### JWT - Request
 
-![JWT Request Example](./request.png)
+![JWT Request Example](http://sivatechlab.com/wp-content/uploads/2017/09/jwt-get-customer.png)
 
 El token debe ser intercambiado enel backend por un usuario y una contraseña a travez de una petición **POST**.
 
